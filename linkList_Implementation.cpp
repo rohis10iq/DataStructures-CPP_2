@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// A Node class for each student
 class Node{
     private:
         int ID;
@@ -22,6 +23,7 @@ class Node{
     friend class StudentList;
 };
 
+// A class for the Student List
 class StudentList{
     private:
         Node* head;
@@ -32,7 +34,7 @@ class StudentList{
             head = NULL;
             length = 0;
         }
-
+    // The Insert function inserts the student information
     void insertData(int ID, string name, float CGPA){
         Node* newNode = new Node(ID, name, CGPA);
         if(head == NULL){      
